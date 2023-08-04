@@ -1,21 +1,20 @@
 button {
-    background-color: #4CAF50; /* สีเขียว */
+    background-color: #4CAF50;
     border: none;
-    color: white; /* สีข้อความ */
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 4px; /* มุมโค้ง */
-    box-shadow: 2px 2px 12px #aaa; /* เงา */
-    transition: background-color 0.3s; /* เอฟเฟคขณะโฮเวอร์ */
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px #aaa;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049; /* สีเขียวเข้มขึ้นเล็กน้อยเมื่อโฮเวอร์ */
+    background-color: #45a049; 
 }
 #todo-list {
     font-family: Arial, sans-serif;
@@ -32,7 +31,7 @@ button:hover {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     font-size: 18px;
-    transition: background-color 0.3s; /* เอฟเฟคขณะโฮเวอร์ */
+    transition: background-color 0.3s; 
 }
 
 #todo-list li:last-child {
@@ -40,7 +39,7 @@ button:hover {
 }
 
 #todo-list li:hover {
-    background-color: #f5f5f5; /* สีเทาอ่อนเม
+    background-color: #f5f5f5; 
 
 
 body {
@@ -52,5 +51,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* สูงเต็มหน้าจอ */
+    height: 100vh; 
+}
 }
