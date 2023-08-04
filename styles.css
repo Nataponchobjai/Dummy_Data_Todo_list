@@ -1,0 +1,56 @@
+button {
+    background-color: #4CAF50; /* สีเขียว */
+    border: none;
+    color: white; /* สีข้อความ */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px; /* มุมโค้ง */
+    box-shadow: 2px 2px 12px #aaa; /* เงา */
+    transition: background-color 0.3s; /* เอฟเฟคขณะโฮเวอร์ */
+}
+
+button:hover {
+    background-color: #45a049; /* สีเขียวเข้มขึ้นเล็กน้อยเมื่อโฮเวอร์ */
+}
+#todo-list {
+    font-family: Arial, sans-serif;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#todo-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    transition: background-color 0.3s; /* เอฟเฟคขณะโฮเวอร์ */
+}
+
+#todo-list li:last-child {
+    border-bottom: none;
+}
+
+#todo-list li:hover {
+    background-color: #f5f5f5; /* สีเทาอ่อนเม
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* สูงเต็มหน้าจอ */
+}
