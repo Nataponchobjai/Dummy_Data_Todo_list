@@ -1,4 +1,3 @@
-
 let arrayOfTodos = [
     {
         "userId": 14,
@@ -14,6 +13,7 @@ let arrayOfTodos = [
     }
 ];
 
+let filteredTodos = [];
 
 const fetchTodos = () => {
     fetch("https://jsonplaceholder.typicode.com/todos")
@@ -27,26 +27,60 @@ const fetchTodos = () => {
         });
 };
 
-
 const logTodos = () => {
     console.log(arrayOfTodos);
 };
 
-
-const populateTodos = () => {
+const clearTodosFromView = () => {
     const orderedList = document.getElementById('todo-list');
-    
     orderedList.innerHTML = '';
+};
 
-    
-    for (let indexArray = 0; indexArray < arrayOfTodos.length; indexArray++) {
+const populateTodos = (todosToPopulate = arrayOfTodos) => {
+    const orderedList = document.getElementById('todo-list');
+    let index = 0;
+
+    for (let todo of todosToPopulate) {
         const newLi = document.createElement("li");
-        const newContent = document.createTextNode(arrayOfTodos[indexArray].title);
+        const newContent = document.createTextNode(index + 1); 
         newLi.appendChild(newContent);
         orderedList.appendChild(newLi);
 
-        if (arrayOfTodos[indexArray].completed) {
-            console.log("Completed todo title:", arrayOfTodos[indexArray].title);
+        if (todo.completed) {
+            console.log(" todo number:", index + 1); 
         }
+
+        index++; 
     }
 };
+
+const filterByUserId = () => {
+    const userId = parseInt(document.getElementById('userIdFilter').value);
+    
+    if (userId < 1 || userId > 10) {
+        alert("Please enter a valid user ID (1-10)");
+        return;
+    }
+
+    filteredTodos = arrayOfTodos.filter(todo => todo.userId === userId);
+    
+    clearTodosFromView();
+    populateTodos(filteredTodos);
+};
+
+const showCompleted = () => {
+    const completedTodos = filteredTodos.filter(todo => todo.completed);
+    
+    clearTodosFromView();
+    populateTodos(completedTodos);
+};
+
+const showNotCompleted = () => {
+    const notCompletedTodos = filteredTodos.filter(todo => !todo.completed);
+    
+    clearTodosFromView();
+    populateTodos(notCompletedTodos);
+};
+
+
+fetchTodos();
