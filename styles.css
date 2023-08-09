@@ -12,6 +12,20 @@ button {
     box-shadow: 2px 2px 12px #aaa;
     transition: background-color 0.3s;
 }
+input  {
+    background-color: #d40ab3;
+    border: none;
+    color: rgb(255, 252, 252);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px #aaa;
+    transition: background-color 0.3s;
+}
 
 button:hover {
     background-color: #45a049; 
